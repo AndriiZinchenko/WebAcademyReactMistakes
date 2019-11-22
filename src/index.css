@@ -1,0 +1,26 @@
+body {
+    background-color: #96DCD4;
+    color: #294C48 !important;
+    margin: 0;
+}
+#root > button > span {
+    color: #294C48;
+}
+
+#root > header {
+    background-color: #6FCFC4;
+}
+
+#root {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#root > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

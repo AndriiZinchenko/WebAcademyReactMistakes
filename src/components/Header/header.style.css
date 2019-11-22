@@ -1,0 +1,11 @@
+button.headerButton {
+    color: white;
+}
+
+button.headerButton:disabled {
+    color: #1F3936;
+}
+
+a {
+    text-decoration: none;
+}

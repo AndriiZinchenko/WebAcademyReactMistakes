@@ -1,5 +1,5 @@
 import { remove } from 'lodash';
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Button from "@material-ui/core/Button";
 
 const initState = [
@@ -36,7 +36,7 @@ const ListKey = () => {
     };
 
 
-    const onRemove = (id) => () => {
+    const onRemove = useCallback((id) => () => {
         setState((current) => {
             const newState = [...current];
             remove(newState, (value) => (
@@ -44,7 +44,7 @@ const ListKey = () => {
             ));
             return newState;
         })
-    };
+    }, []);
 
     return (
         <div>
@@ -55,7 +55,7 @@ const ListKey = () => {
                         // Это улучшит работу алгоритмов React по оптимизации.
                         // key должен быть уникальным и не меняться при любых обстоятельствах.
                         // не используйте index для key.
-                        key={id}
+                        // key={id}
                         onClick={onRemove(id)}
                     >
                         {text}

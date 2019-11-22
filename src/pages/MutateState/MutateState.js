@@ -21,7 +21,7 @@ class MutateState extends React.Component{
     // при сравнии состояния будут работать не так как вы ожидалию.
     mutateState = (state) => {
         let list = state.list;
-        // let {list} = state;
+        // let { list } = state;
         // let list = [...state.list];
         list.push('new');
         this.setState({list});
